@@ -77,7 +77,7 @@ public class SimpleCal
         int y=Integer.parseInt(jtext1.getText());
         jresult1.setText(String.valueOf(x/y));
     }});
-    
+    }
     
 public static void main(String[] args)
 {
