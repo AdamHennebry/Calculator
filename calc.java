@@ -2,30 +2,30 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import javax.swing.event.*;
-public class lab8ex3
+public class SimpleCal
 {
     
     
-    public lab8ex3()
+    public SimpleCal()
     {
     JFrame f=new JFrame("Calc");
-    f.setLocation(250,100);
+    f.setLocation(500,350);
     //east
     JLabel jcalc=new JLabel("Calculator");
     JPanel jpcalc=new JPanel();
     //center
-    JLabel jfirstN=new JLabel("First NO");
-    JLabel jSecondN=new JLabel("Second NO");
-    JLabel jresult=new JLabel("Result");
+    JLabel jfirstN=new JLabel("First Number:");
+    JLabel jSecondN=new JLabel("Second Number:");
+    JLabel jresult=new JLabel("Result:");
     final JTextField jtext=new JTextField(5);
     final JTextField jtext1=new JTextField(5);
     final JTextField jresult1=new JTextField(10);
     
     JPanel jpcenter=new JPanel();
     JButton jbAdd =new JButton("Add");
-    JButton jbMul =new JButton("Mul");
-    JButton jbSub =new JButton("Sub");
-    JButton jbDiv =new JButton("Div");
+    JButton jbMul =new JButton("Multiple");
+    JButton jbSub =new JButton("Subtract");
+    JButton jbDiv =new JButton("Divide");
     JPanel jbButons=new JPanel();
     
     
@@ -56,27 +56,31 @@ public class lab8ex3
         int y=Integer.parseInt(jtext1.getText());
         jresult1.setText(String.valueOf(x-y));
     }});
+        
     jbAdd.addActionListener(new ActionListener(){ 
         public void actionPerformed(ActionEvent ae){
         int x=Integer.parseInt(jtext.getText());
         int y=Integer.parseInt(jtext1.getText());
         jresult1.setText(String.valueOf(x+y));
     }});
+        
     jbMul.addActionListener(new ActionListener(){ 
         public void actionPerformed(ActionEvent ae){
         int x=Integer.parseInt(jtext.getText());
         int y=Integer.parseInt(jtext1.getText());
         jresult1.setText(String.valueOf(x*y));
     }});
+        
     jbDiv.addActionListener(new ActionListener(){ 
         public void actionPerformed(ActionEvent ae){
         int x=Integer.parseInt(jtext.getText());
         int y=Integer.parseInt(jtext1.getText());
         jresult1.setText(String.valueOf(x/y));
     }});
-    }
+    
+    
 public static void main(String[] args)
 {
-new lab8ex3();
+new SimpleCal();
 }
 }
